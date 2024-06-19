@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+:root {
+    --main-color: #0075ff;
+    --sub-color: #eee;
+    --w-color: #fff;
+    --b-color: #000;
+    --transition-3: 0.3s ease;
+    --transition-5: 0.5s ease;
+    --m-50: 50px;
+    --m-100: 100px;
+    --box-shadow: -16px 3px 30px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    scroll-behavior: smooth;
+    direction: rtl;
+    display: flex;
+    justify-content: start;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+input {
+    font-family: "Cairo", sans-serif;
+}
+
+.container {
+    padding-inline: 15px;
+    margin-inline: auto;
+    width: 90%;
+}
+
+.section-header {
+    margin-bottom: var(--m-50);
+    padding-right: 15px;
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    position: relative;
+    background-color: var(--w-color);
+    width: 53px;
+    min-height: 100vh;
+    box-shadow: var(--box-shadow);
+    padding-block: 15px;
+    overflow: hidden;
+    transition: var(--transition-5);
+}
+
+.sidebar.active {
+    width: 220px;
+}
+
+.sidebar .open-close-sidebar {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.sidebar .open-close-sidebar svg {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.sidebar .contact {
+    margin-top: 67px;
+}
+
+.sidebar .contact ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .contact ul li {
+    padding-block: 10px;
+    padding-inline: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar .contact ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--b-color);
+}
+
+.sidebar .contact ul li a span {
+    transition: var(--transition-3);
+    display: none;
+}
+
+.sidebar .contact ul li a svg {
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    color: var(--main-color);
+    transition: var(--transition-3);
+}
+
+.sidebar .contact li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-3);
+    z-index: -1;
+}
+
+.sidebar .contact li:hover::after {
+    right: 0;
+}
+
+.sidebar .contact li:hover a span,
+.sidebar .contact li:hover a svg {
+    color: var(--w-color);
+}
+
+/* Sidebar */
+
+/* main */
+main {
+    flex: 1;
+}
+
+/* main */
+
+/* hedaer */
+.header {
+    width: 100%;
+    padding-block: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.header img {
+    width: 100px;
+    margin: auto;
+}
+
+/* hedaer */
+
+/* Nav */
+nav {
+    width: 100%;
+    margin-bottom: var(--m-50);
+    padding: 5px 0;
+    background-color: #ececec;
+    overflow: hidden;
+
+    h3 {
+        animation: schoolName 15s linear infinite;
+    }
+}
+
+@keyframes schoolName {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Nav */
+
+/* Time */
+.date {
+    margin-top: 20px;
+}
+
+.date .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.date .container>section {
+    background-color: var(--w-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    min-width: 250px;
+    height: 90px;
+    box-shadow: var(--box-shadow);
+}
+
+.date .container>section span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Time */
+
+.class-statistics {
+    margin-block: var(--m-50);
+}
+
+.class-statistics .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.class-statistics .container>section {
+    background-color: var(--w-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 250px;
+    height: 90px;
+    box-shadow: var(--box-shadow);
+    color: var(--w-color);
+}
+
+.class-statistics .container>section:first-child {
+    background-color: rgba(255, 153, 0, 0.7);
+    box-shadow: -16px 3px 30px 10px rgba(255, 153, 0, 0.3);
+}
+
+.class-statistics .container>section:nth-child(2) {
+    background-color: rgba(76, 175, 80, 0.7);
+    box-shadow: -16px 3px 30px 10px rgba(9, 199, 79, 0.3);
+}
+
+.class-statistics .container>section:nth-child(3) {
+    background-color: rgba(244, 67, 54, 0.7);
+    box-shadow: -16px 3px 30px 10px rgba(199, 53, 9, 0.3);
+}
