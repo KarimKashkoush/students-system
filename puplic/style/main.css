@@ -22,8 +22,6 @@ body {
     font-family: "Cairo", sans-serif;
     scroll-behavior: smooth;
     direction: rtl;
-    display: flex;
-    justify-content: start;
 }
 
 ul {
@@ -176,7 +174,8 @@ button {
 
 /* main */
 main {
-    flex: 1;
+    width: calc(100% - 53px);
+    margin-right: 53px;
 }
 
 /* main */
@@ -220,49 +219,61 @@ nav {
 
 /* Nav */
 
-/* Time */
-.date {
-    margin-top: 20px;
-}
-
-.date .container {
+/* home */
+.home .container{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
 }
 
-.date .container>section {
-    background-color: var(--w-color);
+@media (max-width: 750px) {
+    .home .container{
+        flex-direction: column;
+    }
+}
+
+/* home */
+
+/* Time */
+
+.date {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    min-width: 250px;
-    height: 90px;
     box-shadow: var(--box-shadow);
+    gap: 15px;
+    min-width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
 }
 
-.date .container>section span {
+.date>section:not(:last-child) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--b-color);
+}
+
+.date>section span {
     font-size: 18px;
     font-weight: 600;
 }
-
 /* Time */
 
+
+/* statistics */
 .class-statistics {
-    margin-block: var(--m-50);
+    text-align: center;
 }
 
-.class-statistics .container {
+.class-statistics .boxs{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.class-statistics .container>section {
+.class-statistics .boxs>section {
     background-color: var(--w-color);
     display: flex;
     flex-direction: column;
@@ -275,17 +286,17 @@ nav {
     color: var(--w-color);
 }
 
-.class-statistics .container>section:first-child {
+.class-statistics .boxs>section:first-child {
     background-color: rgba(255, 153, 0, 0.7);
     box-shadow: -16px 3px 30px 10px rgba(255, 153, 0, 0.3);
 }
 
-.class-statistics .container>section:nth-child(2) {
+.class-statistics .boxs>section:nth-child(2) {
     background-color: rgba(76, 175, 80, 0.7);
     box-shadow: -16px 3px 30px 10px rgba(9, 199, 79, 0.3);
 }
 
-.class-statistics .container>section:nth-child(3) {
+.class-statistics .boxs>section:nth-child(3) {
     background-color: rgba(244, 67, 54, 0.7);
     box-shadow: -16px 3px 30px 10px rgba(199, 53, 9, 0.3);
 }
