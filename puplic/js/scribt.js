@@ -48,4 +48,6 @@ function healthyChange() {
     }
 }
 
-
+function printPage() {
+    print();
+}

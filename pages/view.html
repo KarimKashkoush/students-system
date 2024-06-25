@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات الطالب</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../puplic/style/main.css">
+    <link rel="stylesheet" href="../puplic/style/all.css">
+
+    <style>
+        @media print {
+            main {
+                margin: 0;
+                width: 100%;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .print {
+                display: none;
+            }
+
+            .section-header h2 {
+                font-size: 22px;
+                color: #0075ff;
+            }
+
+            nav h3 {
+                text-align: center;
+                animation: none;
+            }
+
+            table tr th {
+                background-color: #0075ff;
+                color: #000;
+            }
+
+            .nwePage {
+                page-break-before: always;
+            }
+
+            .view .container table tr th {
+                color: #000;
+            }
+
+            .Administration {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SideBar -->
+    <section class="sidebar" id="sidebar">
+        <span class="open-close-sidebar" onclick="openCloseSidebar()">
+            <i class="fa-regular fa-circle-left" id="openIcon"></i>
+        </span>
+
+        <section class="contact">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/add.html">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>إضافة طالب</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/list.html">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <span>القائمة</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>الإحصائيات</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="personal">
+            <img src="" alt="">
+        </section>
+    </section>
+    <!-- SideBar -->
+
+    <!-- main -->
+    <main>
+        <!-- header -->
+        <header class="header">
+            <img src="../puplic/images/logo.jpg" alt="">
+        </header>
+        <!-- header -->
+
+        <!-- navbar -->
+        <nav>
+            <h3>مدارس المعالي الإبداعية الأهلية</h3>
+        </nav>
+        <!-- navbar -->
+
+        <section class="view">
+            <section class="container">
+
+                <section class="table">
+                    <h2 class="table-header">
+                        بيانات الطالب
+                    </h2>
+                    <table>
+                        <tr>
+                            <td>رقم الطالب</td>
+                            <td>000</td>
+                        </tr>
+                        <tr>
+                            <td>الاسم</td>
+                            <td>كريم</td>
+                        </tr>
+                        <tr>
+                            <td>الجنسية</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>رقم الهاتف</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>العنوان</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>ايميل ولي الأمر</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>ايميل الطالب علي منصة مدرستي</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>الصف الدراسي الحالي</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>وظيفة ولي الأمر</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>وسيلة الانتقال</td>
+                            <td>0000</td>
+                        </tr>
+                        <tr>
+                            <td>ظروف صحية</td>
+                            <td>0000</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="table">
+                    <h2 class="table-header nwePage">
+                        عدد أيام الغياب والحضور
+                    </h2>
+                    <table>
+                        <tr>
+                            <th>عدد أيام الحضور</th>
+                            <th>عدد أيام الغياب</th>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="table">
+                    <h2 class="table-header nwePage">
+                        حالة الطالب
+                    </h2>
+                    <table>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>غائب</td>
+                            <td>لا يوجد</td>
+                            <td>التواصل مع ولي الأمر عن طريق البريد والواتس والرسائل النصية</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>حاضر</td>
+                            <td>لا يوجد</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="table">
+                    <h2 class="table-header nwePage">
+                        أيام غياب الطالب
+                    </h2>
+                    <table>
+                        <tr>
+                            <th>التاريخ</th>
+                            <th>اليوم</th>
+                            <th>الاجراء المتخذ</th>
+                        </tr>
+                        <tr>
+                            <td>12/12/12</td>
+                            <td>السبت</td>
+                            <td>لا يوجد</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="Administration">
+                    <section>
+                        <h2 class="teacherNam">المعلم</h2>
+                    </section>
+                    <section>
+                        <h2>المشرف الطلابي</h2>
+                    </section>
+                    <section>
+                        <h2>مدير المدرسة</h2>
+                    </section>
+                </section>
+
+                <button class="btn print" onclick="printPage()">
+                    طباعة تقرير حالة الطالب
+                </button>
+            </section>
+        </section>
+    </main>
+    <!-- main -->
+
+    <script src="../puplic/js/scribt.js"></script>
+    <script src="../puplic/js/all.js"></script>
+</body>
+
+</html>
